@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, TextInput, StyleSheet, Image, TouchableOpacity, Keyboard } from 'react-native';
 
 const TextImagecustom = ({
   ValueText,
@@ -7,6 +7,7 @@ const TextImagecustom = ({
   imageShow,
   imageHide,
   secureTextEntry,
+  Title,TypeOfkeyword
 }) => {
   const [isSecure, setIsSecure] = useState(secureTextEntry || false);
 
@@ -17,11 +18,11 @@ const TextImagecustom = ({
   return (
     <View style={styles.container1}>
       <TextInput
-        placeholder="Enter your password"
+        placeholder={Title}
         placeholderTextColor="lightgrey"
         value={ValueText}
         onChangeText={ChangeText}
-        keyboardType="number-pad"
+        keyboardType={'default'}
         style={styles.inputText}
         secureTextEntry={isSecure}
       />
@@ -48,10 +49,11 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 2,
     borderColor: 'darkgrey',
-    padding: 10,
-    width: '90%',
-    marginTop: 20,
+    padding: 4,
+    // width: '90%',
+    marginTop: 9,
     backgroundColor: 'white',
+    alignItems:"center"
   },
   inputText: {
     flex: 1,
@@ -61,8 +63,8 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   ImageStyle: {
-    width: 20,
-    height: 20,
+    width: 30,
+    height: 30,
     resizeMode: 'contain', 
   },
 });

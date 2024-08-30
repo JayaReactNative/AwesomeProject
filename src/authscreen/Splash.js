@@ -1,33 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text,StyleSheet, SafeAreaView,Image } from 'react-native';
-import useCustomDimensions from '../utility/HeightandWidth';
-import { showIcon } from '../assets/imagePath/Images';
+import React, { useEffect } from 'react';
+import {
+  StyleSheet,
+  SafeAreaView,
+  ImageBackground,
+  Dimensions
+} from 'react-native';
+import { SplashImage } from '../assets/imagePath/Images'; 
+import { Colors } from '../assets/colors/Colors';
 
+const { width, height } = Dimensions.get('window'); 
+const Splash = ({ navigation }) => {
 
-
-const Splash = ({navigation}) => {
- useEffect(()=>{
-  setTimeout(() => {
-    
-  }, 2000);
- })
+  useEffect(() => {
+    const timer = setTimeout(() => {
+    navigation.navigate('Login'); 
+    }, 3000);
+    return () => clearTimeout(timer); 
+  }, [navigation]);
 
   return (
-    <View style={styles.container}>
-    <SafeAreaView>
-     <Image  source={showIcon}></Image>     
-     </SafeAreaView>
-    </View>
+    <SafeAreaView >
+      <ImageBackground
+        source={SplashImage}
+        style={styles.imageBackground}
+        resizeMode='cover'
+      />
+    </SafeAreaView>
   );
-}
-
-export default Splash;
+};
 
 const styles = StyleSheet.create({
-   container:{
-    flex:1,
-    justifyContent:'center',
-    alignItems:'center', 
-    backgroundColor:'skyblue'
-   }
-})
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.Violet,
+  },
+  imageBackground: {
+    width: width * 1, 
+    height: height * 1, 
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default Splash;

@@ -1,6 +1,6 @@
 export const String = {
-  LOGIN: 'Login',
-  SINGUP: 'Singup',
+  LOGIN: 'Log In',
+  SINGUP: 'Sign Up',
   SPLASH: 'Splash',
   CANCEL: 'Cancel',
   OK: 'Ok',
@@ -10,10 +10,13 @@ export const String = {
   // -------- sign ----
   SIGN_IN: 'Sign In',
   EMAIL: 'Email',
+  NAME: 'Name',
   PHONE: 'Mobile Number',
   FULL_NAME: 'Full Name',
   PASSWORD: 'Password',
-  FORGOT_PASSWORD: 'Forgot Password',
+  CONFIRM_PASSWORD: 'Confirm Password',
+  RETYPE_PASSWORD: 'Re - Type Password',
+  FORGOT_PASSWORD: 'Forgot Password ?',
   DONT_HAVE_ACCOUNT: "Don't have an account?",
   SIGNUP: 'Sign Up',
   LOREM_TEXT:

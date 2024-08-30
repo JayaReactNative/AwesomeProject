@@ -6,12 +6,12 @@ const ButtonCustom = ({
   onClickButton, 
   backgroundColor = 'blue', 
   textColor = 'white', 
-  width = "100%"
+  width = "100%",Buttonstyle
 }) => {
   return (
     <TouchableOpacity 
       onPress={onClickButton} 
-      style={[styles.mainView, { backgroundColor, width }]}>
+      style={[styles.mainView, { backgroundColor, width },Buttonstyle]}>
       <Text style={[styles.textStyle, { color: textColor }]}>
         {title}
       </Text>
@@ -23,8 +23,8 @@ export default ButtonCustom;
 
 const styles = StyleSheet.create({
   mainView: {
-    borderRadius: 5,
-    padding:11,
+    borderRadius: 10,
+    padding:15,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop:15

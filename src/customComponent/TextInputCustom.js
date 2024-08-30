@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 
-const TextInputCustom = ({ ValueText, ChangeText }) => {
+const TextInputCustom = ({ ValueText, ChangeText,Title }) => {
   return (
     <View style={styles.container1}>
       <TextInput 
-        placeholder='Enter your text'
+        placeholder={Title}
         placeholderTextColor='lightgrey'
         value={ValueText}
         onChangeText={ChangeText}
@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 2,
     borderColor: 'darkgrey',
-    padding: 10,
-    width: '90%',
-    marginTop: 20,
+    padding: 4,
+    // width: '95%',
+    marginTop: 8,
     backgroundColor: 'white',
   },
   inputText: {
