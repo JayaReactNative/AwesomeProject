@@ -75,7 +75,7 @@ const Login = ({navigation}) => {
     </View>
   );
 };
-
+// test
 const styles = StyleSheet.create({
   container: {
     flex: 1,
