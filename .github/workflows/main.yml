@@ -18,10 +18,26 @@ jobs:
           distribution: 'temurin'
 
       - run: npm install
-      - run: cd android && ./gradlew clean  && ./gradlew assembleRelease
+      - run: cd android && ./gradlew clean && ./gradlew assembleRelease
       
-      - name: Push to Release
+      # List files for debugging
+      - name: List APK Directory
+        run: ls -R android/app/build/outputs/apk/release
+
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: release
-          path: android/app/build/outputs/apk/release/*
+          name: release-apk
+          path: android/app/build/outputs/apk/release/*.apk
+
+      # If you build an AAB, you would use this instead
+      # - run: cd android && ./gradlew clean && ./gradlew bundleRelease
+
+      # - name: List AAB Directory
+      #   run: ls -R android/app/build/outputs/bundle/release
+
+      # - name: Upload AAB Artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: release-aab
+      #     path: android/app/build/outputs/bundle/release/*.aab
