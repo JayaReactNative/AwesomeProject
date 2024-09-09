@@ -81,6 +81,7 @@ const SignUp = ({navigation}) => {
             backgroundColor={Colors.Orange}
             title={'SIGN IN'}
             Buttonstyle={styles.buttonStyle}
+            onClickButton={()=>navigation.navigate('OtpVerify')}
           />
 
           <TouchableOpacity
@@ -123,7 +124,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: Colors.White,
     textAlign:'center',
-    marginTop:"25%"
+    marginTop:"20%"
   },
   postionLog: {
     width:'100%',
@@ -134,7 +135,7 @@ const styles = StyleSheet.create({
     width: '100%',
     position: 'absolute',
     bottom: 0,
-    top: '34%',
+    top: '30%',
     backgroundColor: Colors.White,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,

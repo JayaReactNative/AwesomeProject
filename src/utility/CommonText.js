@@ -14,9 +14,10 @@ export const String = {
   PHONE: 'Mobile Number',
   FULL_NAME: 'Full Name',
   PASSWORD: 'Password',
+  VERIFICATION: 'Verification',
   CONFIRM_PASSWORD: 'Confirm Password',
   RETYPE_PASSWORD: 'Re - Type Password',
-  FORGOT_PASSWORD: 'Forgot Password ?',
+  FORGOT_PASSWORD: 'Forgot Password',
   DONT_HAVE_ACCOUNT: "Don't have an account?",
   SIGNUP: 'Sign Up',
   LOREM_TEXT:

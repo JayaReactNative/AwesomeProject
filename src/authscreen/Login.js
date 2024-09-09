@@ -6,6 +6,7 @@ import TextInputCustom from '../customComponent/TextInputCustom';
 import {String} from '../utility/CommonText';
 import {
   checkbox,
+  checked,
   hideIcon,
   showIcon,
   unchecked,
@@ -50,12 +51,12 @@ const Login = ({navigation}) => {
           <CheckboxCommon
             Title={'Remember me'}
             imageHide={unchecked}
-            imageShow={checkbox}
+            imageShow={checked}
             secureTextEntry={true}
             TextStyle={styles.rememberText}
           />
-          <TouchableOpacity style={{marginLeft: '25%',}}>
-          <Text style={styles.forText}>{String.FORGOT_PASSWORD}</Text>
+          <TouchableOpacity style={{marginLeft: '25%'}} onPress={()=>navigation.navigate('ForgotScreen')}>
+          <Text style={styles.forText}>{String.FORGOT_PASSWORD}?</Text>
           </TouchableOpacity>
         </View>
 

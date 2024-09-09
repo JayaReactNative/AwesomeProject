@@ -7,6 +7,6 @@ export const Colors ={
     Violet:'violet',
     DarkBlue:"blue",
     Black:'black',
-    Grey:'grey',
+    Grey:'lightgrey',
     Orange:"#FF7622"
 }

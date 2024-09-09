@@ -7,6 +7,8 @@ import Home from '../Screens/Home';
 import Login from '../authscreen/Login';
 import SignUp from '../authscreen/SignUp';
 import ForgotScreen from '../authscreen/ForgotScreen';
+import OtpVerify from '../authscreen/OtpVerify';
+import Demo from '../Demo';
 
 
 export const useCustomDimensions = () => {
@@ -24,11 +26,13 @@ const Stack = createNativeStackNavigator()
 const NavigationScreen = () => {
  return (
     <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen name='Demo' component={Demo} options={{headerShown:false}}/>
         <Stack.Screen name='Splash' component={Splash} options={{headerShown:false}}/>
         <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
         <Stack.Screen name='SignUp' component={SignUp} options={{headerShown:false}}/>
         <Stack.Screen name='ForgotScreen' component={ForgotScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='OtpVerify' component={OtpVerify} options={{headerShown:false}}/>
         <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
         </Stack.Navigator>
     </NavigationContainer>
